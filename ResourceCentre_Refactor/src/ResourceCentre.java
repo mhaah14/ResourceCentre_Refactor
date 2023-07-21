@@ -1,10 +1,8 @@
 import java.util.ArrayList;
-<<<<<<< HEAD
-//Aisha
-=======
-//Yati
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
 
+//Aisha
+
+//Yati
 public class ResourceCentre {
 
     
@@ -22,13 +20,7 @@ public class ResourceCentre {
 	
 	private static final int OPTION_QUIT = 5;
 
-	private static final int ITEM_TYPE_CHROMEBOOK = 2;
-	private static final int ITEM_TYPE_CAMCORDER = 1;
-	private static final int OPTION_RETURN = 4;
-	private static final int OPTION_LOAN = 3;
-	private static final int OPTION_ADD = 2;
-	private static final int OPTION_VIEW = 1;
-	private static final int OPTION_QUIT = 5;
+	
 
 	public static void main(String[] args) {
 
@@ -60,21 +52,20 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-<<<<<<< HEAD
-				if (itemType == ITEM_TYPE_CAMCORDER) {
-=======
+
+				
 				if (itemType == OPTION_VIEW) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					System.out.println("Camcorder added");
 
-<<<<<<< HEAD
+
 				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
-=======
+
 				} else if (itemType == OPTION_ADD) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 					// Add Chromebook
 					Chromebook cb = inputChromebook();
 					ResourceCentre.addChromebook(chromebookList, cb);
@@ -92,40 +83,40 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-<<<<<<< HEAD
-				if (itemType == ITEM_TYPE_CAMCORDER) {
-=======
+
+				if (itemType == ITEM_TYPE_CAMCODER) {
+
 				if (itemType == OPTION_VIEW) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
-<<<<<<< HEAD
+
 				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
-=======
+
 				} else if (itemType == OPTION_ADD) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 					// Loan Chromebook
 					ResourceCentre.loanChromebook(chromebookList);
 				} else {
 					System.out.println("Invalid type");
 				}
 
-<<<<<<< HEAD
+
 			} else if (option == OPTION_RETURN) {
-=======
+
 			} else if (option ==OPTION_RETURN) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
 				ResourceCentre.setHeader("ITEM TYPES");
 				itemTypeMenu();
 				
-				int itemType = Helper.readInt("Enter option to select item type > ");
-<<<<<<< HEAD
-				if (itemType == ITEM_TYPE_CAMCORDER) {
-=======
+				
+
 				if (itemType == ITEM_TYPE_CAMCODER) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
+				if (itemType == ITEM_TYPE_CAMCODER) {
+
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
 				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
@@ -140,8 +131,11 @@ public class ResourceCentre {
 			} else {
 				System.out.println("Invalid option");
 			}
-
+			}
+			}
 		}
+
+		
 
 	}
 
@@ -286,21 +280,22 @@ public class ResourceCentre {
 		for (int i = 0; i < camcorderList.size(); i++) {
 					
 			String assetTag = camcorderList.get(i).getAssetTag();
-<<<<<<< HEAD
+
 			boolean availability = camcorderList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)				
 					&& availability == true) {
-=======
+
 			boolean isAvailable = camcorderList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)				
 					&& isAvailable == true) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
 				
+			}
 			}
 		}
 		return isLoaned;
@@ -328,15 +323,15 @@ public class ResourceCentre {
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			String assetTag = chromebookList.get(i).getAssetTag();
-<<<<<<< HEAD
+
 			boolean availability = chromebookList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& availability == true) {
-=======
+
 			boolean isAvailable = chromebookList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& isAvailable == true) {
->>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
+
 				
 				chromebookList.get(i).setIsAvailable(false);
 				chromebookList.get(i).setDueDate(dueDate);
@@ -344,6 +339,7 @@ public class ResourceCentre {
 				isLoaned = true;
 				
 			}
+		}
 		}
 		return isLoaned;
 	}
