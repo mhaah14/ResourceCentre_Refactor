@@ -2,7 +2,7 @@ import java.util.ArrayList;
 <<<<<<< HEAD
 //Aisha
 =======
-//yati
+//Yati
 >>>>>>> branch 'master' of https://github.com/mhaah14/ResourceCentre_Refactor.git
 
 public class ResourceCentre {
